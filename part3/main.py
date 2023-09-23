@@ -23,7 +23,7 @@ def main() -> None:
     app = Dash(external_stylesheets=[BOOTSTRAP])
     app.title = i18n.t("general.app_title")
     app.layout = create_layout(app, data)
-    app.run()
+    app.run(debug=True, host="0.0.0.0")
 
 
 if __name__ == "__main__":
