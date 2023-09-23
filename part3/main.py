@@ -6,7 +6,7 @@ from src.components.layout import create_layout
 from src.data.loader import load_transaction_data
 from src.data.source import DataSource
 
-LOCALE = "nl"
+LOCALE = "en"
 DATA_PATH = "./data/transactions.csv"
 
 
