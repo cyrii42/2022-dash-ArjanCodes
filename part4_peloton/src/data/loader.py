@@ -48,6 +48,16 @@ def compose(*functions: Preprocessor) -> Preprocessor:
 
 
 def load_transaction_data(path: str, locale: str) -> pd.DataFrame:
+    
+    with mariadb_engine.connect() as conn:
+    df = pd.read_sql(
+        "SELECT * from peloton",
+        conn,
+        #index_col='start_time_iso',
+        parse_dates=['start_time_iso', 'start_time_local']
+        )
+    
+    
     # load the data from the CSV file
     data = pd.read_csv(
         path,

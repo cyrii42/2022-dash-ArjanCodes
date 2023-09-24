@@ -1,1 +1,0 @@
-from ..components import bar_chart
