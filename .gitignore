@@ -4,4 +4,5 @@ htmlcov
 **/.DS_Store
 **/*.log
 /src/components/config.py
-part4_peloton/src/components/config.py
+part1_peloton/src/components/config.py
+._.DS_Store
